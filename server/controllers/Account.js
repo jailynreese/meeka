@@ -103,7 +103,7 @@ const updatePass = (request, response) => {
 
   let account = Account.AccountModel.findByUsername(req.session.username, null);
 
-  Account.AccountModel.generateHash(req.body.pass, (salt, hash) => {
+  return Account.AccountModel.generateHash(req.body.pass, (salt, hash) => {
     // const accountData = {
     //   id: req.session.account._id,
     //   username: req.session.username,
@@ -120,7 +120,7 @@ const updatePass = (request, response) => {
     const savePromise = account.save();
 
     savePromise.then(() => {
-      req.session.account = Account.AccountModel.toAPI(newAccount);
+      req.session.account = Account.AccountModel.toAPI(account);
       //res.json({ redirect: '/maker' });
       //return res.status(200).json({ error: 'Password update successful' });
     });

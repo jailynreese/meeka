@@ -46,7 +46,8 @@ const retrieveFile = (req, res) => {
   //   return res.end(doc.data);
   // });
 
-  return filedb.FileModel.findByOwner(req.session.account._id, req.session.account.date, (err, doc) => {
+  return filedb.FileModel.findByOwner(req.session.account._id, req.session.account.date, 
+    (err, doc) => {
     if (err) {
       console.log(err);
       return res.status(400).json({ error: 'An error occurred' });
