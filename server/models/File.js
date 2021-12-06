@@ -35,13 +35,13 @@ const FileSchema = new mongoose.Schema({
   },
 });
 
-FileSchema.statics.findByOwner = (ownerId, entryDate, callback) => {
-  const search = {
-    //owner: convertID(ownerId),
-    date: entryDate,
-  };
-  //return JournalModel.find(search).select('data').lean().exec(callback);
-};
+// FileSchema.statics.findByOwner = (ownerId, entryDate, callback) => {
+//   const search = {
+//     //owner: convertID(ownerId),
+//     date: entryDate,
+//   };
+//   //return JournalModel.find(search).select('data').lean().exec(callback);
+// };
 
 FileModel = mongoose.model('FileModel', FileSchema);
 
