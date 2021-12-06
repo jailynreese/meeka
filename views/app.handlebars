@@ -1,0 +1,49 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Meeka</title>
+  <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  <script crossorigin src="https://unpkg.com/prop-types/prop-types.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/remarkable/1.6.2/remarkable.min.js"></script>
+  <link rel="shortcut icon" href="/assets/img/favicon.png" />
+  <!-- UIkit CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.9.4/dist/css/uikit.min.css" />
+
+  <!-- UIkit JS -->
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.9.4/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.9.4/dist/js/uikit-icons.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="/assets/style.css" />
+</head>
+
+<body>
+  <script src="/assets/bundle.js"></script>
+  <nav className="uk-navbar-container" uk-navbar>  
+    <div class="uk-navbar-left">
+      <ul class="uk-navbar-nav">
+        <a href="/login"><img id="logo" src="/assets/img/Meeka2.png" alt="logo" /></a>
+        <li className="navlink"><a id="mainPageButton">Main Page</a></li>
+        <li className="navlink"><a id="makeEntryButton" uk-toggle="target: #entryFormContainer">Create a New Entry</a></li>
+      </ul>
+    </div>
+
+    <div class="uk-navbar-right">
+      <ul class="uk-navbar-nav">
+        <li className="navlink"><a id="settingsButton">Settings</a></li>
+        <li className="navlink"><a href="/logout">Log out</a></li>
+      </ul>
+    </div>
+
+  </nav>
+  <main>
+    <div id="entryFormContainer" uk-modal></div>
+    <div id="entries"></div>
+    <div id="settings"></div>
+  </main>
+</body>
+
+</html>

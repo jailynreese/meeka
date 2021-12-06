@@ -1,0 +1,39 @@
+
+a img {
+    width: 250px;
+}
+
+*, h2 {
+    text-transform: lowercase;
+}
+
+.uk-navbar-nav li a, .uk-table th {
+    text-transform: lowercase;
+}
+
+.inputContainers {
+    margin: 5px;
+}
+
+/* button {
+
+} */
+
+#mainLogin {
+    display: flex;
+    align-items: center;
+}
+
+#loginImg {
+    width: 40%;
+    margin-left: 10vw;
+
+}
+
+#signupForm, #loginForm {
+    margin-left: 20vw;
+}
+
+.uk-navbar-right {
+    padding-right: 20px;
+}
